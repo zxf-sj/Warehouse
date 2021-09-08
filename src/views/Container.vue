@@ -10,6 +10,7 @@
             <el-submenu index="1-3">
               <template slot="title">选项1-3</template>
               <el-menu-item index="/test/demoTest">选项1-3-1</el-menu-item>
+              <el-menu-item index="/test/cdn">选项1-3-2</el-menu-item>
             </el-submenu>
           </el-submenu>
         </el-menu>
@@ -28,11 +29,13 @@
 import list from "./components/List.vue";
 import imgDom from "./components/Img.vue";
 import demoTest from "./components/DemoTest.vue";
+import cdn from "./components/cdn.vue";
 export default {
   components: {
     list,
     imgDom,
     demoTest,
+    cdn,
   },
   data() {
     return {};
