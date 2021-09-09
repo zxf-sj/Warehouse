@@ -87,3 +87,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+/deep/ .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: aqua !important;
+}
+</style>

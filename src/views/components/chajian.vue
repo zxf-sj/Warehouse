@@ -24,20 +24,6 @@ export default {
     return {};
   },
   watch: {
-    // listSlect: {
-    //   handler(val) {
-    //     console.log(val);
-
-    //     // if (val != "" && val == this.multipleTable) {
-    //     //   this.antProps.forEach((row) => {
-    //     //     this.$refs[this.multipleTable].toggleRowSelection(row);
-    //     //   });
-    //     // } else {
-    //     //   this.$refs[this.multipleTable].clearSelection();
-    //     // }
-    //   },
-    //   deep: true,
-    // },
     multipleTable: {
       handler(val) {
         console.log(val);
@@ -51,9 +37,13 @@ export default {
   methods: {
     dddd(val, flag) {
       console.log(flag);
-      this.antProps[val].forEach((row) => {
-        this.$refs[val].toggleRowSelection(row, flag);
-      });
+      // this.antProps[val].forEach((row) => {
+      //   this.$refs[val].toggleRowSelection(row, flag);
+      // });
+      //改造后的for循环  是所有数组遍历方式里速度最快的
+      for (let j = 0, len = this.antProps[val].length; j < len; j++) {
+        this.$refs[val].toggleRowSelection(this.antProps[val][j], flag);
+      }
     },
     handleSelectionChange(val) {
       this.multipleSelection = val;

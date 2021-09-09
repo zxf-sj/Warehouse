@@ -95,15 +95,6 @@ export default {
       }
     },
     changeCelectAll(res) {
-      // if (res.length > 0) {
-      //   this.oneChange = [];
-      //   for (let i in res) {
-      //     this.oneChange.push(res[i].id);
-      //   }
-      // } else {
-      //   this.oneChange = [];
-      // }
-      console.log(res);
       if (res.length == 0) {
         let tableData = this.tableData;
         for (let i in tableData) {

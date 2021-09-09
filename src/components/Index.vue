@@ -20,14 +20,24 @@
       </el-option>
     </el-select>
     {{ singer }}
+    <el-main>
+      {{ new Date() | formatDate }}
+      <!-- {{ 1631088915 | formatDate }} -->
+    </el-main>
   </div>
 </template>
 <script>
-import Vue from "vue";
 import { apiAddress } from "../request/api";
 import { mapActions, mapMutations, mapState } from "vuex";
-
+import { formatLocaleString } from "@/filter/data";
+// import { formatDate } from "@/filter";
 export default {
+  filters: {
+    formatDate(time) {
+      let date = new Date(time);
+      return formatLocaleString(date, "yyyy-MM-dd hh:mm:ss");
+    },
+  },
   data() {
     return {
       msg: "jesycold",

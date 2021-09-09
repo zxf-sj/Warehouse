@@ -58,3 +58,13 @@ export default {
   },
 };
 </script>
+<style>
+.el-table .el-table__body tr.el-table__row.current-row td,
+.el-table__body tr.current-row > td,
+.el-table__body tr.hover-row.current-row > td,
+.el-table__body tr.hover-row.el-table__row.current-row > td,
+.el-table__body tr.hover-row.el-table__row > td,
+.el-table__body tr.hover-row > td {
+  background-color: #c6cfdf;
+}
+</style>
